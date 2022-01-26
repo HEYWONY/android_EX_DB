@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     values = new ContentValues();
                     values.put("name", mEditName.getText().toString());
                     values.put("age", mEditAge.getText().toString());
+                    db.insert("people", null, values); /*  여기 안 넣어서 오류 있었음 */
                     mDBHelper.close();
                 } break;
             case R.id.btnSelectAll: //전체검색
